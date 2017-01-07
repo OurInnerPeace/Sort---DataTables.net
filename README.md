@@ -9,4 +9,7 @@ Sort of complex render
 # Version
     DataTables-1.10.13
     jQuery v1.12.0
+# Other link 
+    https://datatables.net/forums/discussion/comment/76838/#Comment_76838
+    
 
