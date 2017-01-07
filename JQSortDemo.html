@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" type="image/ico" href="http://www.datatables.net/favicon.ico">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0">
+	<title>DataTables example - Orthogonal data</title>
+	<link rel="stylesheet" type="text/css" href="jquery.dataTables.min.css">
+	<style type="text/css" class="init">
+	
+	</style>
+	<script type="text/javascript" language="javascript" src="jquery.js">
+	</script>
+	<script type="text/javascript" language="javascript" src="jquery.dataTables.min.js">
+	</script>
+	<script type="text/javascript" language="javascript" class="init">
+	
+		$(document).ready(function() {
+			$('#example').DataTable( {
+				ajax: "arrays.txt",
+				"columnDefs": [ {
+					"targets": "_all",
+					"createdCell": function (td, cellData, rowData, row, col) {
+					
+						var $div = $("<div>" + cellData.data + "</div>");
+						$(td).html("");
+						$(td).append($div);
+						
+					},
+					"render": function (data, type, full, meta) {
+					
+						return type === "sort" ? data.data : data;
+						
+					}
+					
+				} ],
+				
+			} );
+		} );
+
+	</script>
+</head>
+<body class="dt-example">
+	<div class="container">
+		<section>
+			<h1>DataTables example <span>Orthogonal data</span></h1>
+			
+			<h2>Arrays Data</h2>
+		
+			<div class="demo-html"></div>
+			<table id="example" class="display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Position</th>
+						<th>Office</th>
+						<th>Extn.</th>
+						<th>Start date</th>
+						<th>Salary</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<th>Name</th>
+						<th>Position</th>
+						<th>Office</th>
+						<th>Extn.</th>
+						<th>Start date</th>
+						<th>Salary</th>
+					</tr>
+				</tfoot>
+			</table>	
+		</section>
+	</div>
+	</body>
+</html>

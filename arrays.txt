@@ -1,0 +1,28 @@
+{
+    "data": [
+        [
+            {"data": "AlPacino"},
+            {"data": "System Architect"},
+            {"data": "Edinburgh"},
+            {"data": "5421"},
+            {"data": "2011\/04\/25"},
+            {"data": "$320,800"}
+        ],
+        [
+            {"data": "Garrett Winters"},
+            {"data": "Accountant"},
+            {"data": "Tokyo"},
+            {"data": "8422"},
+            {"data": "2011\/07\/25"},
+            {"data": "$170,750"}
+        ],
+        [
+            {"data": "Ashton Cox"},
+            {"data": "Junior Technical Author"},
+            {"data": "San Francisco"},
+            {"data": "1562"},
+            {"data": "2009\/01\/12"},
+            {"data": "$86,000"}
+        ]
+    ]
+}
